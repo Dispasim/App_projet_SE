@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace App_projet_SE
 {
     internal static class Program
@@ -12,6 +14,8 @@ namespace App_projet_SE
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+
         }
     }
 }
