@@ -28,7 +28,7 @@ namespace App_projet_SE
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            string apiUrl = "http://127.0.0.1:8000/musique/1/fichier-audio1/";
+            string apiUrl = "http://127.0.0.1:8000/musique/1/fichier-audio/";
             string audioFilePath = "C:/Users/eliot/Downloads/temporaire.ext";
 
             using (HttpClient client = new HttpClient())
