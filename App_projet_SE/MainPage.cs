@@ -16,5 +16,14 @@ namespace App_projet_SE
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreationCompte creationCompte = new CreationCompte();
+            creationCompte.ShowDialog();
+            this.Close();
+
+        }
     }
 }
