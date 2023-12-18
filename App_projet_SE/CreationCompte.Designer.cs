@@ -35,6 +35,7 @@
             button1 = new Button();
             label1 = new Label();
             pseudo = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // email
@@ -71,7 +72,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(282, 312);
+            button1.Location = new Point(380, 317);
             button1.Name = "button1";
             button1.Size = new Size(231, 108);
             button1.TabIndex = 6;
@@ -95,11 +96,22 @@
             pseudo.Size = new Size(231, 31);
             pseudo.TabIndex = 8;
             // 
+            // button2
+            // 
+            button2.Location = new Point(112, 317);
+            button2.Name = "button2";
+            button2.Size = new Size(231, 108);
+            button2.TabIndex = 9;
+            button2.Text = "Retour";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // CreationCompte
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(pseudo);
             Controls.Add(label1);
             Controls.Add(button1);
@@ -122,5 +134,6 @@
         private Button button1;
         private Label label1;
         private TextBox pseudo;
+        private Button button2;
     }
 }

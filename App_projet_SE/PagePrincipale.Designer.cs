@@ -1,6 +1,6 @@
 ﻿namespace App_projet_SE
 {
-    partial class MainPage
+    partial class PagePrincipale
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
-            // button1
+            // listBox1
             // 
-            button1.Location = new Point(238, 81);
-            button1.Name = "button1";
-            button1.Size = new Size(344, 138);
-            button1.TabIndex = 0;
-            button1.Text = "Connection";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 25;
+            listBox1.Location = new Point(45, 73);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(361, 629);
+            listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // button2
-            // 
-            button2.Location = new Point(238, 261);
-            button2.Name = "button2";
-            button2.Size = new Size(344, 138);
-            button2.TabIndex = 1;
-            button2.Text = "Enregistrement";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // MainPage
+            // PagePrincipale
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "MainPage";
-            Text = "MainPage";
+            ClientSize = new Size(1102, 920);
+            Controls.Add(listBox1);
+            Name = "PagePrincipale";
+            Text = "PagePrincipale";
+            Load += PagePrincipale_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private ListBox listBox1;
     }
 }

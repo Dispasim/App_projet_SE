@@ -25,5 +25,14 @@ namespace App_projet_SE
             this.Close();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PageConnection pageConnection = new PageConnection();
+            pageConnection.ShowDialog();
+            this.Close();
+
+        }
     }
 }

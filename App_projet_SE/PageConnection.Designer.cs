@@ -33,6 +33,7 @@
             label2 = new Label();
             mdp = new TextBox();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,24 +66,36 @@
             // 
             mdp.Location = new Point(313, 266);
             mdp.Name = "mdp";
+            mdp.PasswordChar = '-';
             mdp.Size = new Size(150, 31);
             mdp.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Location = new Point(228, 337);
+            button1.Location = new Point(384, 342);
             button1.Name = "button1";
             button1.Size = new Size(332, 96);
             button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Text = "Valider";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(27, 342);
+            button2.Name = "button2";
+            button2.Size = new Size(332, 92);
+            button2.TabIndex = 5;
+            button2.Text = "Retour";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // PageConnection
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(mdp);
             Controls.Add(label2);
@@ -101,5 +114,6 @@
         private Label label2;
         private TextBox mdp;
         private Button button1;
+        private Button button2;
     }
 }

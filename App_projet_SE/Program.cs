@@ -17,5 +17,14 @@ namespace App_projet_SE
 
 
         }
+
+        public class MyModel
+        {
+            public string titre { get; set; }
+            public int id { get; set; }
+            public string album { get; set; }
+            public string duree { get; set; }
+            
+        }
     }
 }

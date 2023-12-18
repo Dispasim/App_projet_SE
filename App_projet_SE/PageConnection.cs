@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
-using System.Threading.Tasks;
+
 
 
 namespace App_projet_SE
@@ -43,7 +43,7 @@ namespace App_projet_SE
 
                 var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = await _client.PostAsync("http://127.0.0.1:8000/connexion-utilisateur/", content);
+                HttpResponseMessage response = await _client.PostAsync("http://127.0.0.1:8000/connexion/", content);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -58,6 +58,11 @@ namespace App_projet_SE
                     token = _token;
 
                     MessageBox.Show("Connexion réussie ! Token : " + token, "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+                    PagePrincipale pagePrincipale = new PagePrincipale(token);
+                    pagePrincipale.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -69,6 +74,14 @@ namespace App_projet_SE
             {
                 MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
+            this.Close();
         }
     }
 }
