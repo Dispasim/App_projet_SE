@@ -110,10 +110,7 @@ namespace App_projet_SE
                     }
                     MessageBox.Show("Fichier audio téléchargé avec succès !");
 
-                    audioFile = new AudioFileReader(audiopath);
-                    outputDevice = new WaveOutEvent();
-                    outputDevice.Init(audioFile);
-                    outputDevice.Play();
+                    
 
 
 
@@ -135,13 +132,12 @@ namespace App_projet_SE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (outputDevice != null)
-            {
+            
                 audioFile = new AudioFileReader(audiopath);
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
                 outputDevice.Play();
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
