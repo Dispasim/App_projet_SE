@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using NAudio.Wave;
+using System.Reflection;
 
 namespace App_projet_SE
 {
@@ -21,6 +22,7 @@ namespace App_projet_SE
     {
         private AudioFileReader audioFile;
         private WaveOutEvent outputDevice;
+        private readonly string audiopath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "monFichier.txt");
         public Form2()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace App_projet_SE
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            string apiUrl = "http://127.0.0.1:8000/musique/1/fichier-audio/";
+            string apiUrl = "http://127.0.0.1:8000/musique/1/fichier_audio/";
             string audioFilePath = "C:/Users/eliot/Downloads/temporaire.ext";
 
             using (HttpClient client = new HttpClient())
