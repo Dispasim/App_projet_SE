@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // listBox1
@@ -142,11 +149,66 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(969, 668);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(347, 135);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Play";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(969, 594);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(347, 34);
+            this.progressBar1.TabIndex = 12;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.progressBar1.DragDrop += new System.Windows.Forms.DragEventHandler(this.progressBar1_DragDrop);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1137, 558);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1202, 558);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 25);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "/";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1227, 558);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 25);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "label6";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 920);
+            this.ClientSize = new System.Drawing.Size(1350, 920);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -179,5 +241,11 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
+        private ProgressBar progressBar1;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private System.Windows.Forms.Timer timer1;
     }
 }

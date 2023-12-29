@@ -122,30 +122,25 @@ namespace App_projet_SE
                         {
                             
 
-                            // Ajoutez le token dans les en-têtes de la requête
-                            //httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
 
-                            // Créez le contenu de la requête multipart/form-data
                             using MultipartFormDataContent form = new MultipartFormDataContent();
 
-                            // Ajoutez les données supplémentaires à la requête
                             form.Add(new StringContent(id.ToString()), "id");
                             form.Add(new StringContent(album), "album");
                             form.Add(new StringContent(titre), "titre");
                             form.Add(new StringContent(artiste), "artiste");
                             form.Add(new StringContent(duree), "duree");
 
-                            // Ajoutez le fichier audio à la requête
+
                             using FileStream fileStream = new FileStream(audiopath, FileMode.Open);
                             form.Add(new StreamContent(fileStream), "fichier_audio", Path.GetFileName(audiopath));
 
-                            // Envoi du fichier audio avec les données à l'API Django
                             HttpResponseMessage response1 = await httpClient.PostAsync("http://127.0.0.1:8000/musiques/", form);
 
                             if (response1.IsSuccessStatusCode)
                             {
                                 MessageBox.Show("Fichier audio envoyé avec succès.");
-                                // Traitez la réponse de l'API si nécessaire
+
                             }
                             else
                             {

@@ -27,6 +27,7 @@ namespace App_projet_SE
         private AudioFileReader audioFile;
         private WaveOutEvent outputDevice;
         private readonly string audiopath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "temp.ext");
+        private System.Windows.Forms.Timer timer;
         public PagePrincipale(string token_)
         {
 
@@ -34,6 +35,9 @@ namespace App_projet_SE
             _client = new HttpClient();
             token = token_;
             myObjects = new List<MyModel>();
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 100; 
+            timer.Tick += timer1_Tick;
 
 
 
@@ -137,7 +141,8 @@ namespace App_projet_SE
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
                 outputDevice.Play();
-            
+            timer.Start();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -160,6 +165,64 @@ namespace App_projet_SE
             this.Close();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (outputDevice == null || audioFile == null)
+            {
 
+                    MessageBox.Show("Veuillez d'abord sélectionner un fichier audio et appuyer sur 'lecture'.");
+                    return;
+                
+            }
+
+            if (outputDevice.PlaybackState == PlaybackState.Playing)
+            {
+                outputDevice.Pause();
+                button4.Text = "Play";
+            }
+            else if (outputDevice.PlaybackState == PlaybackState.Paused)
+            {
+                outputDevice.Play();
+                button4.Text = "Pause";
+            }
+            else
+            {
+                outputDevice.Play();
+                button4.Text = "Pause";
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Check");
+            if (audioFile != null && outputDevice != null)
+            {
+               
+                
+                
+                    progressBar1.Maximum = (int)audioFile.TotalTime.TotalSeconds;
+                    progressBar1.Value = (int)audioFile.CurrentTime.TotalSeconds;
+                    label4.Text = audioFile.CurrentTime.ToString(@"mm\:ss");
+                    label6.Text = audioFile.TotalTime.ToString(@"mm\:ss");
+                
+            }
+        }
+        private void progressBar1_Scroll(object sender, EventArgs e)
+        {
+            if (audioFile != null && outputDevice != null)
+            {
+                audioFile.CurrentTime = TimeSpan.FromSeconds(progressBar1.Value);
+            }
+        }
+
+        private void progressBar1_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }
