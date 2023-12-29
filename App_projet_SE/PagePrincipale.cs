@@ -199,7 +199,7 @@ namespace App_projet_SE
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //MessageBox.Show("Check");
+            
             if (audioFile != null && outputDevice != null)
             {
                
@@ -222,6 +222,15 @@ namespace App_projet_SE
 
         private void progressBar1_DragDrop(object sender, DragEventArgs e)
         {
+
+        }
+
+        private void progressBar1_Scroll_1(object sender, EventArgs e)
+        {
+            if (audioFile != null && outputDevice != null)
+            {
+                audioFile.CurrentTime = TimeSpan.FromSeconds(progressBar1.Value);
+            }
 
         }
     }

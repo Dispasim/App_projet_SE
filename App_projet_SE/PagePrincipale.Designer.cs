@@ -41,11 +41,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -159,15 +160,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(969, 594);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(347, 34);
-            this.progressBar1.TabIndex = 12;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
-            this.progressBar1.DragDrop += new System.Windows.Forms.DragEventHandler(this.progressBar1_DragDrop);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -199,15 +191,23 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(969, 586);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(347, 69);
+            this.progressBar1.TabIndex = 16;
+            this.progressBar1.Scroll += new System.EventHandler(this.progressBar1_Scroll_1);
+            // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 920);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -223,6 +223,7 @@
             this.Name = "PagePrincipale";
             this.Text = "PagePrincipale";
             this.Load += new System.EventHandler(this.PagePrincipale_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.progressBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,10 +243,10 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private ProgressBar progressBar1;
         private Label label4;
         private Label label5;
         private Label label6;
         private System.Windows.Forms.Timer timer1;
+        private TrackBar progressBar1;
     }
 }
