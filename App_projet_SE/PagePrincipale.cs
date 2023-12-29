@@ -39,7 +39,7 @@ namespace App_projet_SE
 
         }
 
-        private async void PagePrincipale_Load(object sender, EventArgs e)
+        private async void PagePrincipale_Load_1(object sender, EventArgs e)
         {
             MessageBox.Show(audiopath);
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
@@ -73,7 +73,7 @@ namespace App_projet_SE
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1)
             {
@@ -90,7 +90,7 @@ namespace App_projet_SE
             }
         }
 
-        private async void buttonLecture_Click(object sender, EventArgs e)
+        private async void buttonLecture_Click_1(object sender, EventArgs e)
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
@@ -130,7 +130,7 @@ namespace App_projet_SE
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             
                 audioFile = new AudioFileReader(audiopath);
@@ -140,7 +140,7 @@ namespace App_projet_SE
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             if (outputDevice != null)
             {
@@ -150,5 +150,16 @@ namespace App_projet_SE
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreationCompte creationCompte = new CreationCompte();
+            PagePersocs pagePersocs = new PagePersocs(token);    
+            pagePersocs.ShowDialog();
+            this.Close();
+        }
+
+
     }
 }

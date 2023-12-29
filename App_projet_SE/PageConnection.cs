@@ -30,7 +30,7 @@ namespace App_projet_SE
 
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
             string pseudo_ = pseudo.Text;
             string mdp_ = mdp.Text;
@@ -82,6 +82,20 @@ namespace App_projet_SE
             MainPage mainPage = new MainPage();
             mainPage.ShowDialog();
             this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
+            this.Close();
+
+        }
+
+        private void PageConnection_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

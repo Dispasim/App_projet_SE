@@ -24,7 +24,7 @@ namespace App_projet_SE
             _client = new HttpClient();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
             string pseudo_ = pseudo.Text;
             string email_ = email.Text;
@@ -65,12 +65,19 @@ namespace App_projet_SE
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_2(object sender, EventArgs e)
         {
             this.Hide();
             MainPage mainPage = new MainPage();
             mainPage.ShowDialog();
             this.Close();
         }
+
+        private void pseudo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

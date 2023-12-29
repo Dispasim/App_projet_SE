@@ -28,83 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            pseudo = new TextBox();
-            label2 = new Label();
-            mdp = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pseudo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mdp = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(355, 80);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Pseudo";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(355, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pseudo";
             // 
             // pseudo
             // 
-            pseudo.Location = new Point(313, 127);
-            pseudo.Name = "pseudo";
-            pseudo.Size = new Size(150, 31);
-            pseudo.TabIndex = 1;
+            this.pseudo.Location = new System.Drawing.Point(313, 127);
+            this.pseudo.Name = "pseudo";
+            this.pseudo.Size = new System.Drawing.Size(150, 31);
+            this.pseudo.TabIndex = 1;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(330, 225);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Mot de passe";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(330, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mot de passe";
             // 
             // mdp
             // 
-            mdp.Location = new Point(313, 266);
-            mdp.Name = "mdp";
-            mdp.PasswordChar = '-';
-            mdp.Size = new Size(150, 31);
-            mdp.TabIndex = 3;
+            this.mdp.Location = new System.Drawing.Point(313, 266);
+            this.mdp.Name = "mdp";
+            this.mdp.PasswordChar = '-';
+            this.mdp.Size = new System.Drawing.Size(150, 31);
+            this.mdp.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Location = new Point(384, 342);
-            button1.Name = "button1";
-            button1.Size = new Size(332, 96);
-            button1.TabIndex = 4;
-            button1.Text = "Valider";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(384, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(332, 96);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Valider";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            button2.Location = new Point(27, 342);
-            button2.Name = "button2";
-            button2.Size = new Size(332, 92);
-            button2.TabIndex = 5;
-            button2.Text = "Retour";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(27, 342);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(332, 92);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Retour";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // PageConnection
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(mdp);
-            Controls.Add(label2);
-            Controls.Add(pseudo);
-            Controls.Add(label1);
-            Name = "PageConnection";
-            Text = "PageConnection";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.mdp);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pseudo);
+            this.Controls.Add(this.label1);
+            this.Name = "PageConnection";
+            this.Text = "PageConnection";
+            this.Load += new System.EventHandler(this.PageConnection_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

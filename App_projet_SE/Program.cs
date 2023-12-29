@@ -26,5 +26,10 @@ namespace App_projet_SE
             public string duree { get; set; }
             
         }
+
+        public class IdModel
+        {
+            public int id { get; set; }
+        }
     }
 }
