@@ -43,5 +43,14 @@ namespace App_projet_SE
             this.Close();
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreationCompte creationCompte = new CreationCompte();
+            creationCompte.ShowDialog();
+            this.Close();
+
+        }
     }
 }

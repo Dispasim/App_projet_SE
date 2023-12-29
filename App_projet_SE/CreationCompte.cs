@@ -78,6 +78,15 @@ namespace App_projet_SE
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
 
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
+            this.Close();
+
+
+        }
     }
 }

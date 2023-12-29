@@ -28,102 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.email = new System.Windows.Forms.TextBox();
-            this.mdp = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pseudo = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            email = new TextBox();
+            mdp = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            button1 = new Button();
+            label1 = new Label();
+            pseudo = new TextBox();
+            button2 = new Button();
+            SuspendLayout();
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(282, 144);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(231, 31);
-            this.email.TabIndex = 1;
+            email.Location = new Point(282, 144);
+            email.Name = "email";
+            email.Size = new Size(231, 31);
+            email.TabIndex = 1;
             // 
             // mdp
             // 
-            this.mdp.Location = new System.Drawing.Point(282, 240);
-            this.mdp.Name = "mdp";
-            this.mdp.Size = new System.Drawing.Size(231, 31);
-            this.mdp.TabIndex = 2;
+            mdp.Location = new Point(282, 240);
+            mdp.Name = "mdp";
+            mdp.Size = new Size(231, 31);
+            mdp.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 189);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Mot de passe";
+            label2.AutoSize = true;
+            label2.Location = new Point(335, 189);
+            label2.Name = "label2";
+            label2.Size = new Size(120, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Mot de passe";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Email";
+            label3.AutoSize = true;
+            label3.Location = new Point(365, 99);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Email";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(380, 317);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 108);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Valider";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            button1.Location = new Point(380, 317);
+            button1.Name = "button1";
+            button1.Size = new Size(231, 108);
+            button1.TabIndex = 6;
+            button1.Text = "Valider";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Pseudo";
+            label1.AutoSize = true;
+            label1.Location = new Point(365, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 25);
+            label1.TabIndex = 7;
+            label1.Text = "Pseudo";
             // 
             // pseudo
             // 
-            this.pseudo.Location = new System.Drawing.Point(282, 52);
-            this.pseudo.Name = "pseudo";
-            this.pseudo.Size = new System.Drawing.Size(231, 31);
-            this.pseudo.TabIndex = 8;
-            this.pseudo.TextChanged += new System.EventHandler(this.pseudo_TextChanged);
+            pseudo.Location = new Point(282, 52);
+            pseudo.Name = "pseudo";
+            pseudo.Size = new Size(231, 31);
+            pseudo.TabIndex = 8;
+            pseudo.TextChanged += pseudo_TextChanged;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(112, 317);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 108);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Retour";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(112, 317);
+            button2.Name = "button2";
+            button2.Size = new Size(231, 108);
+            button2.TabIndex = 9;
+            button2.Text = "Retour";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // CreationCompte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pseudo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.mdp);
-            this.Controls.Add(this.email);
-            this.Name = "CreationCompte";
-            this.Text = "CreationCompte";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(pseudo);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(mdp);
+            Controls.Add(email);
+            Name = "CreationCompte";
+            Text = "CreationCompte";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
