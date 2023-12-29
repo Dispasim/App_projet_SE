@@ -45,7 +45,7 @@ namespace App_projet_SE
 
         private async void PagePrincipale_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show(audiopath);
+            //MessageBox.Show(audiopath);
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
             {
@@ -96,6 +96,13 @@ namespace App_projet_SE
 
         private async void buttonLecture_Click_1(object sender, EventArgs e)
         {
+            if (outputDevice != null)
+            {
+                outputDevice.Stop();
+                outputDevice.Dispose();
+                outputDevice = null;
+            }
+            File.Delete(audiopath);
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
             {
@@ -136,8 +143,12 @@ namespace App_projet_SE
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
-                audioFile = new AudioFileReader(audiopath);
+            if (outputDevice != null)
+            {
+                outputDevice.Stop();
+                outputDevice.Dispose();
+            }
+            audioFile = new AudioFileReader(audiopath);
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
                 outputDevice.Play();
@@ -159,9 +170,9 @@ namespace App_projet_SE
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CreationCompte creationCompte = new CreationCompte();
-            PagePersocs pagePersocs = new PagePersocs(token);    
-            pagePersocs.ShowDialog();
+  
+            Pargeperso pargeperso = new Pargeperso(token);    
+            pargeperso.ShowDialog();
             this.Close();
         }
 

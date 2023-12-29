@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelNom = new System.Windows.Forms.Label();
             this.labelDuree = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxTitre = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxArtiste = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -95,15 +95,6 @@
             this.labelDuree.Size = new System.Drawing.Size(0, 25);
             this.labelDuree.TabIndex = 5;
             this.labelDuree.Click += new System.EventHandler(this.labelDuree_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
             // 
             // label5
             // 
@@ -163,11 +154,22 @@
             this.textBoxArtiste.Size = new System.Drawing.Size(150, 31);
             this.textBoxArtiste.TabIndex = 13;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(779, 327);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(333, 94);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Retour";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // PagePersocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1124, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBoxArtiste);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -175,7 +177,6 @@
             this.Controls.Add(this.textBoxTitre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDuree);
             this.Controls.Add(this.labelNom);
             this.Controls.Add(this.label3);
@@ -198,7 +199,6 @@
         private Label label3;
         private Label labelNom;
         private Label labelDuree;
-        private Label label4;
         private Label label5;
         private Label label6;
         private TextBox textBoxTitre;
@@ -206,5 +206,6 @@
         private Button button2;
         private Label label2;
         private TextBox textBoxArtiste;
+        private Button button3;
     }
 }

@@ -125,7 +125,7 @@ namespace App_projet_SE
 
                             using MultipartFormDataContent form = new MultipartFormDataContent();
 
-                            form.Add(new StringContent(id.ToString()), "id");
+                            form.Add(new StringContent(id.ToString()), "auteur");
                             form.Add(new StringContent(album), "album");
                             form.Add(new StringContent(titre), "titre");
                             form.Add(new StringContent(artiste), "artiste");
@@ -157,7 +157,7 @@ namespace App_projet_SE
                     else
                     {
                         MessageBox.Show($"Erreur : Statut de la réponse : {response.StatusCode}");
-                        Console.WriteLine($"Erreur : Statut de la réponse : {response.StatusCode}");
+                    
                     }
                 }
                 catch (Exception ex)
@@ -165,10 +165,20 @@ namespace App_projet_SE
                     MessageBox.Show($"Une exception s'est produite : {ex.Message}");
 
 
-                    Console.WriteLine($"Une exception s'est produite : {ex.Message}");
+              
                 }
 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Pargeperso pargeperso = new Pargeperso(token);
+            pargeperso.ShowDialog();
+            this.Close();
+        }
     }
+    
 }
